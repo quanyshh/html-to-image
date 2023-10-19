@@ -44,7 +44,7 @@ def clean_html(url):
 
     allTd = soup.findAll('td')
     for td in allTd:
-        into_td = td.findAll(['p','div', 'h', 'ul', 'li', 'a', 'span', 'label', 'i', 'link', 'q'])
+        into_td = td.findAll()
         if into_td:
             for intd in into_td:
                 s = intd.string
@@ -57,7 +57,7 @@ def clean_html(url):
     
     allTh = soup.findAll('th')
     for th in allTh:
-        into_th = th.findAll(['p','div', 'h', 'ul', 'li', 'a', 'span', 'label', 'i', 'link', 'q'])
+        into_th = th.findAll()
         if into_th:
             for inth in into_th:
                 s = inth.string
